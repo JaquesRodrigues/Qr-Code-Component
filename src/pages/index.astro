@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import qrCode from "../imgs/qrCode.png";
 ---
 
 <Layout title='Qr Code Component'>
   <main>
-    <img src='/src/imgs/image-qr-code.png' alt='' />
+    <Image class='image' src={qrCode} alt='qr-code image' />
     <h3>Improve your front-end skills by building this project</h3>
     <p>
       Scan the qr code to visit Frontend Mentor and take your coding skills to
@@ -26,8 +28,9 @@ import Layout from "../layouts/Layout.astro";
     background-color: var(--white__clr);
     border-radius: var(--border-rounded);
   }
-  img {
+  .image {
     width: 300px;
+    height: auto;
     border-radius: var(--border-rounded);
   }
   h3 {
